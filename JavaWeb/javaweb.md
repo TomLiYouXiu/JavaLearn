@@ -95,7 +95,60 @@ h1~h6 标题标签
 	<div> </div> 层
 ~~~
 
+~~~html
+14.
+ <table> </table> 表格
+ <tr> 行
+ rowspan 行合并
+ <td> 列
+ colspan 列合并
+ <th> 表头列 居中加粗 
+ 
+ table的属性（但是基本都已淘汰）
+ align 对齐方式
+ border 边框
+ width 宽度
+ cellspacing 间距
+ cellpadding 填充
+~~~
+
+~~~html
+15.
+ <hr /> 直线
+~~~
+
+~~~html
+16.
+ <form> </form> 表单
+ action 发送目的地
+ method 提交方式
+	post 隐藏
+	get 地址栏明文显示
+~~~
+
+~~~html
+17.
+ 每个都需要指定name
+ <input type="text" name="nickName"/> text 表示文本框 其中属性name必须要指定，否则这个文本框的数据将来是不会发送给服务器的
+ <input type="password" /> 表示密码框 password
+ <input type="radio" name="gender" value="woman"/> radio 单选框 传递的时候需要指定值  value 指定值 单选框是根据name来确定的，name相同既是一个单选框了 checked="checked" 或者checked 默认选中
+ <input type="submit" value=" 注 册 "/> submit 提交按钮
+ <input type="reset" value="重置"/> reset 重置按钮
+ <input type="button" value="这是一个普通按钮"/>button 普通按钮
+~~~
+
+~~~html
+18.
+ <select> </select>下拉列表
+ <option> </option>下拉列表选项
+	selected="selected" 或者 selected 默认选择
+	value 发送到服务器的值
+~~~
+
+~~~html
+19.
+ <textarea> </textarea>多行文本框
+~~~
 
 
 
-​		

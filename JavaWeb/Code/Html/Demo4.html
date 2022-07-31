@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>表单学习</title>
+	</head>
+	<body>
+		<form action="Demo5.html" method="post">
+			昵称：<input type="text" name="nickName" value="请输入昵称"/><br />
+			密码：<input type="password" name="pwd"/><br />
+			性别：<input type="radio" name="gender" value="man" checked="checked"/>男
+				  <input type="radio" name="gender" value="woman"/>女<br />
+			爱好：<input type="checkbox" name="hobby" value="basketball"/>篮球
+				 <input type="checkbox" name="hobby" value="football"/>足球
+				 <input type="checkbox" name="hobby" value="earth"/>地球<br />
+			星座：<select name="star">
+				<option value="1">白羊座</option>
+				<option value="2" selected="selected">狮子座</option>
+				<option value="3">双子座</option>
+				<option value="4">天蝎座</option>
+				<option value="5">金牛座</option>
+				<option value="6">巨蟹座</option>
+				<option value="7">天秤座</option>
+				<option value="8">射手座</option>
+				</select><br />
+			备注：<textarea name="remark" rows="4" cols="50"></textarea><br />
+			<input type="submit" value=" 注 册 "/>
+			<input type="reset" value="重置"/>
+			<input type="button" value="这是一个普通按钮"/>
+		</form>
+	</body>
+</html>
+<!--  
+16.
+ <form> </form> 表单
+ action 发送目的地
+ method 提交方式
+	post 隐藏
+	get 地址栏明文显示
+17.
+ 每个都需要指定name
+ <input type="text" name="nickName"/> text 表示文本框 其中属性name必须要指定，否则这个文本框的数据将来是不会发送给服务器的
+ <input type="password" /> 表示密码框 password
+ <input type="radio" name="gender" value="woman"/> radio 单选框 传递的时候需要指定值  value 指定值 单选框是根据name来确定的，name相同既是一个单选框了 checked="checked" 或者checked 默认选中
+ <input type="submit" value=" 注 册 "/> submit 提交按钮
+ <input type="reset" value="重置"/> reset 重置按钮
+ <input type="button" value="这是一个普通按钮"/>button 普通按钮
+ 
+18.
+ <select> </select>下拉列表
+ <option> </option>下拉列表选项
+	selected="selected" 或者 selected 默认选择
+	value 发送到服务器的值
+19.
+ <textarea> </textarea>多行文本框
+-->
