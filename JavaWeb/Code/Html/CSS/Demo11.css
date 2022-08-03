@@ -1,0 +1,39 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+div{
+	position: relative;
+	float: left;
+	text-align: center;
+}
+table{
+}
+#div1{
+	width: 80%;
+	height: 100%;
+	border: 0px solid blue;
+	margin-left: 10%;
+	float: left;
+	background-color: lightgreen;
+	border-radius: 0.5rem;
+}
+#tbl_fruit , #tbl_fruit th,#tbl_fruit tr,#tbl_fruit td{
+	margin-top: 120px;
+	border: 1px solid gray;
+	width: 100%;
+	table-layout:fixed;
+	/* 文字居中 */
+	text-align: center;
+	/* 单元格的边界合并 */
+	border-collapse: collapse;
+	line-height: 28px;
+	font-size: 16px;
+	font-family: "宋体";
+	font-weight: lighter;
+	color: midnightblue;
+}
+.deleteimg{
+	width: 24px;
+	height: 24px;
+}

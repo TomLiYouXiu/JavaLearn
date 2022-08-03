@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>英雄联盟首页</title>
+    <!-- <div>英雄联盟</div> -->
+    <!-- 这是一个关于首页大图背景设置的练习
+    通过以下设置基本实现了与官网一致的展示效果 
+    但是有一个bug就是当我的网页缩小的时候中心的图片位置会移动到其他位置导致效果就消失了
+    关于上面的问题因为内边距的试用范围是当前的页面大小下的布局 当页面的大小变化时它的值是固定的所以会改变
+    通过使用外边距的方式解决了这个问题
+    参考了 官网的写法后 我决定做一个与官网布局一致 方法大致相同的页面   
+    通过这个练习发现 inline-block 与 block 显示模式之间 在对齐方式上有一点区别
+    在设置大型盒子时还是尽量使用block方便一点。
+    2018年11月4日 23:28:31 添加了导航栏图片及导航栏文字但是整体的效果还没有出来只是将大致区域确定了-->
+
+    <style>
+    /* div {
+        background-color: #000;
+        height: 78px;
+    } */
+    * { /* 通过清空内边距和外边距使页面兼容性更高 */
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        background-color: #000;
+    }
+    div.comm-head {  /* 整个头部区域 */
+        height: 78px;
+        width: 100%;
+        background-color: #000;
+        display: block;
+        /* line-height: 78px; */
+        /* position: relative;
+        top: 0;
+        left: 0;
+        z-index: 11; */
+        /* padding: 10px;  使用内边距控制logo在导航栏的相对位置，但是需要减去相应的高度，这里是减去20px */
+    }
+    ul.nav {  /* 装导航栏文字的盒子 */
+        height: 68px;
+        width: 746.9px;
+        margin: 0;
+        display: inline-block;              /* 让文字能够在一行显示 */
+        font:12px/1.5 tahoma,'\5FAE\8F6F\96C5\9ED1',sans-serif;   /* 因为整个文字是分成两行的所以行高我应该在这个里面控制 */
+        margin-left: 20px;                  /* 让中间的导航栏距离logo有50px远 */
+        text-align: center;                 /* 让文字在盒子中居中 */
+        /* padding-top: 16px;                  让文字垂直居中 */
+    }
+    .nav li { /* 控制装导航栏文字的盒子 */
+        width: 18%;
+        list-style: none;
+        display: inline-block;
+        /* line-height: -1px;  使用行高控制文字靠拢无效 */
+    }
+    .nav a { /* 控制导航栏的文本  把层级放到a的下面的时候修改的效果并不能生效。 */
+        color: #fff;
+        text-decoration: none; 
+    }
+    ul .head-nav-title { /* 导航栏内上方文字 */
+        display: inline-block;
+        font-size: 18px;
+        /* padding-top: 10px; */
+        /* margin-bottom: -1px;  使下方文字向上移动无效 */
+    }
+    ul .head-nav-subtitle { /* 导航栏下方文字 */
+        font-size: 11px;
+        color: #aeaeae;
+        display: inline-block;
+        /* margin-top: -1px;  使文字向上移动无效 */
+    }
+    div.logo { /* 左上角logo图片 */
+        width: 132px;
+        height: 59px;
+        background: #000 url(images/logo.png) no-repeat 50% 14.5px;
+        display: inline-block;
+        /* margin-left: auto; 这个在设置中不起作用 */
+        /* overflow: hidden;  这个在padding中使用才有效果margin中使用作用不明显*/  
+        /* background-color: #fff; */
+    }
+    div.bg {  
+        /* background-image: url(images/bg.jpg); 设置背景图片*/
+        /* 将图像位置设置为 背景颜色为黑色 随元素移动滚动 水平居中 垂直下移78像素 */
+        /* width: 1920px;
+        height: 870px; */
+        background: #000 url(images/bg.jpg) no-repeat scroll 50% 0;
+        display: block;
+    }
+    div.bgc {
+        /* 设置中间空缺部分图片 */
+        height: 870px;
+        width: 1000px;
+        margin: 0 auto;
+        background-color: #fff;
+        background: #000 url(images/bgc.jpg) no-repeat scroll 50% 0;
+        display: block;
+    }
+    </style>
+</head>
+<body>
+    <div class="comm-head">
+        <div class="logo"></div>
+        <ul class="nav">
+            <li>
+                <a href="#">
+                    <span class="head-nav-title">游戏资料</span> <br />
+                    <span class="head-nav-subtitle">GAME INFO</span>
+                </a>
+            </li>
+            <li><a href="#">
+                    <span class="head-nav-title">商城/合作</span><br />
+                    <span class="head-nav-subtitle">STORE</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="head-nav-title">社区互动</span><br />
+                    <span class="head-nav-subtitle">COMMUNITY</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="head-nav-title">赛事官网</span><br />
+                    <span class="head-nav-subtitle">ESPORTS</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="head-nav-title">自助系统</span><br />
+                    <span class="head-nav-subtitle">SYSTEM</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="bg">
+        <div class="bgc">我是中间图片
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+            <p>英雄联盟</p>
+        </div>
+    </div>
+    
+    
+</body>
+</html>

@@ -1,0 +1,16 @@
+		/* ID样式 ID属性尽量唯一（虽然重复也不会报错）*/
+		#p4{
+			background-color: aqua;
+			font-size: 24px;
+			font-weight: bolder;
+			font-style: italic;	
+			font-family: "宋体";
+			}
+		/* 组合样式表 */
+		div p{
+			color: pink;
+		}
+		div .f32{
+			font-size: 32px;
+			font-family: "黑体";
+		}

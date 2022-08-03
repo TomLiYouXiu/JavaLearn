@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>CSS布局</title>
+		<style type="text/css">
+			body{
+				margin: 0;
+				padding: 0;
+			}
+			#div1{
+				width: 200px;
+				height: 50px;
+				background-color: green;
+				position: absolute;  /* 绝对定位 */
+				left: 100px;
+				top: 100px;
+			}
+			#div2{
+				width: 200px;
+				height: 50px;
+				background-color: pink;
+				position: relative; /* 相对定位 相对父容器 */
+				float: left;
+				margin-left: 20px;
+			}
+			#div3{
+				background-color: aqua;
+	
+			}
+			#div4{
+				width: 200px;
+				height: 50px;
+				background-color: pink;
+				float: left;
+			}
+			#div5{
+				width: 200px;
+				height: 50px;
+				background-color: green;
+				/* float: left; */
+			}
+			div{
+				position: relative;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- <div id="div1"></div> -->
+		<!-- <div id="div2"></div> -->
+		<div id="div3">
+			<div id="div4">&nbsp;</div>
+			<div id="div5">&nbsp;</div>
+		</div>
+		
+	</body>
+</html>
+<!-- 
+	老师讲的有问题
+		1.现在的父级div设置了绝对宽度不会因为子集的宽度而发生变化2
+		2.position: relative;设置为绝对路径后，其实都为流式布局，所以浮动都要设置
+ -->

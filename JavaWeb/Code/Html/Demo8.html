@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>CSS盒子模型</title>
+		<style type="text/css">
+			#div1{
+				width: 400px;
+				height: 400px;
+				background-color: aquamarine;
+				
+				/* border 边框样式属性*/
+				
+				/* 边框粗细*/
+				border-width: 3px;
+				
+				/* 边框样式  solid（实线） dotted（点状线）……*/
+				border-style: dotted;
+				
+				/* 边框颜色 */
+				border-color: skyblue;
+				
+				/* 可以合并到一起 */
+				/* border: 4px double skyblue; */
+				
+				/* 也可以分别设置 */
+				/* border-top: 4px double skyblue; */
+				
+				
+			}
+			#div2{
+				width: 200px;
+				height: 200px;
+				background-color: pink;
+				
+				/* margin */
+				/* margin-top: 100px; */
+				/* margin-left: 100px; */
+				
+				/* 上右下左 */
+				margin: 100px;
+			}
+			#div3{
+				width: 100px;
+				height: 100px;
+				background-color: azure;
+				
+				/* 填充 */
+				padding-top: 50px;
+				padding-left: 50px;
+			}
+			#div4{
+				width: 400px;
+				height: 400px;
+				background-color: aquamarine;
+			}
+			body{
+				margin: 0;
+				padding: 0;
+				border: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div1">
+			<div id="div2">
+				<div id="div3"></div>
+			</div>
+		</div>
+		<div id="div2"></div>
+	</body>
+</html>
+<!-- 
+IE浏览器：我们看到的实际尺寸就是=width
+ Chrome：实际尺寸width+border+padding
+ 
+ CSS盒子模型
+ 1.border 边框
+ 2.margin 间距
+ 3.padding 填充
+ 
+ 
+ -->
